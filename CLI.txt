@@ -1,0 +1,67 @@
+1. create a directory. Enter a directory. Create an empty file named blank. 
+
+aya92@AYA MINGW64 ~
+$ mkdir Aya
+
+aya92@AYA MINGW64 ~
+$ cd Aya
+
+aya92@AYA MINGW64 ~/Aya
+$ touch blank
+
+______________________________________________________________________________________
+
+2. Then write the content "Hello" five times to the file greetings.txt.
+
+aya92@AYA MINGW64 ~/Aya
+$ for i in {1..5}
+> do
+> echo "hello" >> greetings.txt
+> done
+
+   Then copy the file greetings.txt and paste its contents into 1.txt, 2.txt, 3.txt, 4.txt and 5.txt.
+
+aya92@AYA MINGW64 ~/Aya
+$ tee < greetings.txt 1.txt 2.txt 3.txt 4.txt 5.txt
+
+______________________________________________________________________________________
+
+3. Then write the text "cat" to pets.txt
+
+aya92@AYA MINGW64 ~/Aya
+$ echo "cat" > pets.txt
+
+   Then append the text "dog" to pets.txt
+
+aya92@AYA MINGW64 ~/Aya
+$ echo "dog" >> pets.txt
+
+
+   Then append the text "hamster" to pets.txt
+
+aya92@AYA MINGW64 ~/Aya
+$ echo "hamster" >> pets.txt
+
+______________________________________________________________________________________
+
+4. Then write the text "cat" to commands.txt
+
+______________________________________________________________________________________
+
+$ echo "cat" > commands.txt
+
+   Then append the text "ls" to commands.txt
+
+$ echo "ls" >> commands.txt
+
+   Then append the text "pwd" to commands.txt
+
+$ echo "pwd" >> commands.txt
+
+______________________________________________________________________________________
+
+5. Then find unique strings from these two files pets.txt and commands.txt
+   and store the unique strings in lovelyCommands.txt
+
+aya92@AYA MINGW64 ~/Aya
+$ sort -u pets.txt commands.txt > lovelyCommands.txt
